@@ -34,7 +34,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
    BluePolymorph bluePoly = new BluePolymorph(50, 50);
  	 RedMorph redPoly = new RedMorph(200, 200);
  	 MovingMorph MovingMorph=new MovingMorph(150, 150);
- 	 CircleMorph CircleMorph=new CircleMorph(250, 250);
+ 	 CircleMorph CircleMorph=new CircleMorph(400, 250);
  	 mouseMorph MouseMorph=new mouseMorph(20, 20);
  	 ImageMorph imageMorph=new ImageMorph(250, 250);
  	 ClickMorph clickMorph=new ClickMorph(10, 100);
@@ -107,19 +107,7 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
-		System.out.println("a");
-		int x=arg0.getX();
-		int y=arg0.getY();
-		// TODO Auto-generated method stub
-		for(int i=0; i<Poly.size(); i++) {
-			Polymorph m=Poly.get(i);
-			if(m instanceof ClickMorph) {
-	   			if(x>=m.getX() && x<=m.getX()+m.getWidth() &&
-	   					y>=m.getY() && y<=m.getY()+m.getHeight()){
-	   				JOptionPane.showMessageDialog(null, "Hello");
-	   			}
-	   		}
-		}
+		
 	}
 
 	@Override
@@ -137,7 +125,19 @@ public class PolymorphWindow extends JPanel implements ActionListener, MouseList
 	@Override
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("a");
+		int x=arg0.getX();
+		int y=arg0.getY();
+		// TODO Auto-generated method stub
+		for(int i=0; i<Poly.size(); i++) {
+			Polymorph m=Poly.get(i);
+			if(m instanceof ClickMorph) {
+	   			if(x>=m.getX() && x<=m.getX()+m.getWidth() &&
+	   					y-25>=m.getY() && y-25<=m.getY()+m.getHeight()){
+	   				JOptionPane.showMessageDialog(null, "Hello");
+	   			}
+	   		}
+		}
 	}
 
 	@Override

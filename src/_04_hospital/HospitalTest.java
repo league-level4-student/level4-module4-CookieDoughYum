@@ -20,9 +20,9 @@ public class HospitalTest extends TestCase {
 	Hospital testHospital = new Hospital();
 
 	public void testAddDoctor() {
-		testHospital.addDoctor(new GeneralPractitioner());
-		testHospital.addDoctor(new GeneralPractitioner());
-		testHospital.addDoctor(new Surgeon());
+			testHospital.addDoctor(new GeneralPractitioner());
+			testHospital.addDoctor(new GeneralPractitioner());
+			testHospital.addDoctor(new Surgeon());
 		assertEquals(3, testHospital.getDoctors().size());
 	}
 
