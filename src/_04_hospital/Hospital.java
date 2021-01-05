@@ -25,4 +25,21 @@ ArrayList<Patient> patients=new ArrayList<Patient>();
 			// TODO Auto-generated method stub
 			return patients;
 		}
+
+		public void assignPatientsToDoctors() {
+			// TODO Auto-generated method stub
+			int patientsNum=0;
+			for(int i=0; i<doctors.size(); i++) {
+				//patients.remove(i);
+				for(int j=0; j<3 && patientsNum<patients.size(); j++) {
+				try {
+					doctors.get(i).assignPatient(patients.get(patientsNum++));
+					//patientsNum++;
+				} catch (DoctorFullException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			}
+		}
 }

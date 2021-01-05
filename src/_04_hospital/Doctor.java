@@ -15,10 +15,13 @@ ArrayList<Patient> patients=new ArrayList<Patient>();
 		return false;
 	}
 
-	public void assignPatient(Patient patient) {
+	public void assignPatient(Patient patient) throws DoctorFullException {
 		// TODO Auto-generated method stub
 		if(patients.size()<3) {
 			patients.add(patient);
+		}
+		else {
+			throw new DoctorFullException();
 		}
 	}
 
